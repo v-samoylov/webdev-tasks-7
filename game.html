@@ -267,8 +267,8 @@
 
         var headGroup = s.group(head, ears, eyes, nose, nostrils, mouth);
 
-        var SpeechRecognition = window.SpeechRecognition     ||
-                        window.webkitSpeechRecognition;
+        var SpeechRecognition = window.SpeechRecognition ||
+                                window.webkitSpeechRecognition;
         var recognizer = new SpeechRecognition();
         if (recognizer) {
             recognizer.continuous = true;
@@ -286,7 +286,10 @@
                     localStorage.mood = (getMood() + 9).toString();
                     if (getMood() >= 100) {
                         isListening = false;
-                        recognizer.isListening = false;
+                        recognizer.isListening = false;                        
+                        recognizer.stop();
+                        playVoiceSound("annoying.mp3", "audio/mpeg");
+                        document.querySelector('.speech').innerText = '';
                     }
                 };
             });
