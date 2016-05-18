@@ -4,7 +4,10 @@
   "description": "Предыдущие задания были достаточно хардкорные и формальные, поэтому в этот раз мы подготовили\r для вас кое-что фановое™. Предлагаем реализовать простую игру в стиле [тамагочи](https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%BC%D0%B0%D0%B3%D0%BE%D1%87%D0%B8).",
   "main": "game.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify:js": "uglifyjs src/game.js -nc -mt -unsafe -o dist/game.js",
+    "minify:css": "postcss -c options.json -o dist/game.css src/game.css",
+    "build": "npm run minify:js && npm run minify:css"
   },
   "repository": {
     "type": "git",

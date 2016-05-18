@@ -1,1 +1,25 @@
-td{border:1px solid #000;width:40px}.death-msg{top:-50px;position:absolute}.death-msg,.death-sound,.feed-btn{display:none}.speech{height:20px;width:400px;text-align:center}
+td
+{
+    border: 1px solid black;
+    width: 40px;
+}
+.death-msg
+{
+    top: -50px;
+    position: absolute;
+    display: none;
+}
+.feed-btn
+{
+    display: none;
+}
+.death-sound
+{
+    display: none;
+}
+.speech
+{
+    height: 20px;
+    width: 400px;
+    text-align: center;
+}
